@@ -48,3 +48,62 @@ do {
 } while (v <= 10); // 100
 
 // break
+// 1 to 100; print hi when you see the multiplication of 5:
+console.log("-----hi----");
+let num = 5;
+while (num <= 100) {
+  console.log(num);
+  if (num % 5 == 0) {
+    console.log("hi--by");
+    break;
+  }
+  num++;
+}
+
+// continue
+const browser4 = ["chrome", "firefox", "edge"];
+for (a of browser4) {
+  console.log(a);
+  if (a == "firefox") {
+    console.log("launch firefox");
+    break;
+  }
+}
+
+console.log("----for ...in-----");
+// for ... in loop
+const user = {
+  name: "john",
+  age: 30,
+  city: "NYC",
+};
+for (const key in user) {
+  console.log(key + " : " + user[key]);
+}
+
+// name : john
+// age : 30
+// city : NYC
+
+console.log("for in vs for of");
+const br = ["chrome", "firefox", "edge"];
+for (const ele in br) {
+  console.log(ele);
+  console.log(ele + " : " + br[ele]);
+}
+// 0
+// 0 : chrome
+// 1
+// 1 : firefox
+// 2
+// 2 : edge
+
+console.log("for in vs for of");
+const brOf = ["chrome", "firefox", "edge"];
+for (const ele of brOf) {
+  console.log(ele);
+}
+
+// chrome
+// firefox
+// edge

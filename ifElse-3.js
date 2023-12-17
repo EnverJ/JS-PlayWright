@@ -93,3 +93,6 @@ switch (browser3) {
     break;
 }
 // Launch chrome
+
+// multi environment: dev, qa, stage, uat, prod
+// multi users: admin, customer, seller ...
