@@ -33,3 +33,12 @@ console.log(subs); // 86
 (function () {
   console.log("the server is up and running");
 })(); // the server is up and running
+
+
+
+// Generator Function (Using function*)
+// Constructor Function
+// Method Declaration
+// Using yield inside a generator function
+
+
