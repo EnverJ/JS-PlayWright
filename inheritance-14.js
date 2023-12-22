@@ -88,3 +88,38 @@ truck.useAeroDynamic();
 // truck, BMW,1900
 // driving the truck BMW ,capacity: 25
 // Automobile -- aerodynamics 1000
+
+// more hands on
+
+class Cb {
+  constructor(accountInfo, ClientName, ClientId) {
+    this.accountInfo = accountInfo;
+    this.ClientId = ClientId;
+    this.ClientName = ClientName;
+  }
+  getInfo() {
+    return `${this.accountInfo}`, `${this.ClientName}`, `${this.chaisesNumber}`;
+  }
+  users() {
+    console.log(this.ClientId + "Client registered");
+  }
+}
+class vip extends Cb {
+  constructor(accountInfo, ClientName, ClientId, CardColor) {
+    super(accountInfo, ClientName, ClientId);
+    this.CardColor = CardColor;
+  }
+  vipRoom() {
+    console.log(
+      "vip client " +
+        this.ClientId +
+        " should have " +
+        this.CardColor +
+        " vip Id card"
+    );
+  }
+}
+
+const client = new vip("users", "VIP users", 123, "Blue");
+client.vipRoom();
+console.log(client.getInfo());
