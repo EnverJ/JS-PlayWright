@@ -64,19 +64,19 @@ function enjoyCoffee(finalCoffee) {
 // Stir the coffee. -0.3
 // Enjoy your coffee!!!
 
-startCoffeeMachine(function (coffeeMachineStatus) {
-  grindCoffeeBeans(function (groundCoffee) {
-    boilWater(function (boiledWater) {
-      pourBoilingWaterIntoCup(boiledWater, function (waterInCup) {
-        addCoffeeToCup(groundCoffee, function (coffeeInCup) {
-          stirCoffee(coffeeInCup, function (finalCup) {
-            enjoyCoffee(finalCup);
-          });
-        });
-      });
-    });
-  });
-});
+// startCoffeeMachine(function (coffeeMachineStatus) {
+//   grindCoffeeBeans(function (groundCoffee) {
+//     boilWater(function (boiledWater) {
+//       pourBoilingWaterIntoCup(boiledWater, function (waterInCup) {
+//         addCoffeeToCup(groundCoffee, function (coffeeInCup) {
+//           stirCoffee(coffeeInCup, function (finalCup) {
+//             enjoyCoffee(finalCup);
+//           });
+//         });
+//       });
+//     });
+//   });
+// });
 
 // Starting the coffee machine ...
 // Coffee machine is ready.
@@ -90,3 +90,38 @@ startCoffeeMachine(function (coffeeMachineStatus) {
 // Stirring the coffee...
 // Coffee is stirred.
 // Enjoying my coffee enjoyable coffee is added to ground coffee
+console.log("------------ callback hell with arrow => --------------");
+// callback hell with arrow =>
+startCoffeeMachine((coffeeMachineStatus) => {
+  grindCoffeeBeans((groundCoffee) => {
+    boilWater((boiledWater) => {
+      pourBoilingWaterIntoCup(boiledWater, (waterInCup) => {
+        addCoffeeToCup(groundCoffee, (coffeeInCup) => {
+          stirCoffee(coffeeInCup, (finalCup) => {
+            enjoyCoffee(finalCup);
+          });
+        });
+      });
+    });
+  });
+});
+
+// ------------ callback hell with arrow => --------------
+// Starting the coffee machine ...
+// Coffee machine is ready.
+// Grinding coffee beans...
+// Coffee beans are ground.
+// Boiling water...
+// Water is boiled.
+// Pouring boiling water into a cup...
+// Boiling water is in the cup.
+// coffee is added to the cup.
+// Stirring the coffee...
+// Coffee is stirred.
+// Enjoying my coffee enjoyable coffee is added to ground coffee
+
+// Promises Chaining
+startCoffeeMachine((coffeeMachineStatus) => {
+  console.log("coffee machine status");
+  return grindCoffeeBeans();
+});
