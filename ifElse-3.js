@@ -96,3 +96,55 @@ switch (browser3) {
 
 // multi environment: dev, qa, stage, uat, prod
 // multi users: admin, customer, seller ...
+function setEnv(env) {
+  switch (env) {
+    case "QA":
+      console.log("QA");
+      break;
+    case "DEV":
+      console.log("DEV");
+      break;
+    case "Stage":
+      console.log("Stage");
+      break;
+    case "Prod":
+      console.log("Prod");
+      break;
+    default:
+      console.log("Environment dose not match");
+      break;
+  }
+}
+setEnv("QA");
+
+function setTVShow(name) {
+  if (name == "GOAT") {
+    console.log("winter is coming");
+  } else if (name == "The Walking Dead") {
+    console.log("GO to the terminal");
+  } else if (name == "Peaky Blinder") {
+    console.log("By the order of F**g peaky blinder");
+  } else {
+    console.log("not fun!!!");
+  }
+}
+setTVShow("GOAT");
+
+function checkCredit(score) {
+  if (score >= 700) {
+    if (score > 730) {
+      console.log("5A stars client");
+    } else {
+      console.log("5B client");
+    }
+  } else if (score >= 600) {
+    if (score > 650) {
+      console.log("4A client");
+    } else {
+      console.log("4B client");
+    }
+  } else {
+    console.log("Not qualified");
+  }
+}
+checkCredit(703);

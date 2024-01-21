@@ -5,6 +5,10 @@ console.log(1);
 for (let i = 1; i <= 10; i++) {
   console.log(i); // 1,2,3 ...10
 }
+console.log("----------------");
+for (let x = 10; x <= 100; x += 5) {
+  console.log(x);
+}
 
 console.log("---------");
 // 2. for ... of loop:
@@ -16,6 +20,14 @@ console.log("---------");
 // index base
 for (let i = 0; i < array.length; i += 1) {
   console.log(array[i]); // 1,2,3,4,5
+}
+console.log("xxxxxxxxxxxxxxxx");
+const names = ["Java", "Python", "Ruby", "C++"];
+for (const a of names) {
+  console.log("Languages " + a);
+}
+for (let i = 0; i < names.length; i++) {
+  console.log(names[i]);
 }
 
 console.log("---while loop---");
@@ -84,6 +96,21 @@ for (const key in user) {
 // name : john
 // age : 30
 // city : NYC
+console.log(" one more...");
+let book = {
+  author: "Jan",
+  title: "js-js-js",
+  page: 200,
+  forSale: true,
+  price: 24,
+};
+for (const a in book) {
+  if (book[a] === true) {
+    console.log(a + ":" + book[a]);
+    console.log("book is for sale");
+    break;
+  }
+}
 
 console.log("for in vs for of");
 const br = ["chrome", "firefox", "edge"];

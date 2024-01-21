@@ -37,3 +37,11 @@ console.log(revF); // [ 'mango', 'banana', 'apple' ]
 let product = ["macbook", "imac", "samsung", "canon"];
 let proSort = product.sort();
 console.log(proSort); // [ 'canon', 'imac', 'macbook', 'samsung' ]
+
+//
+let month = ["January", "September", "November", "ay"];
+let monthSupport = month.sort();
+console.log(monthSupport); // [ 'January', 'November', 'September' ]
+
+let monLength = month.some((e) => e.length < 5);
+console.log(monLength);
